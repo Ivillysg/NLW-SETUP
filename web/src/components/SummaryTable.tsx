@@ -1,4 +1,3 @@
-import { Tooltip } from "@radix-ui/react-tooltip";
 import { generateDatesFromYearBeginning } from "../utils/generate-dates-from-year-beginning";
 import { HabitDay } from "./HabitDay";
 
@@ -23,8 +22,7 @@ export function SummaryTable() {
       </div>
       <div className="grid grid-rows-7 grid-flow-col gap-3">
         {summaryDates.map((date, i) => (
-                     <HabitDay key={date.toString()} />
-
+          <HabitDay key={date.toString()} />
         ))}
         {amountOfDaysToFill > 0 &&
           Array.from({ length: amountOfDaysToFill }).map((_, i) => (
