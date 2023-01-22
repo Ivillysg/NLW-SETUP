@@ -7,8 +7,11 @@ export function generateDatesFromYearBeginning() {
 
   const dates = [];
   let compareDate = firstDayOfTheYear;
+  let limitDays = dayjs(firstDayOfTheYear).daysInMonth();
 
-  while (compareDate.isBefore(today)) {
+  console.log(compareDate.isBefore(today));
+
+  while (dates.length < limitDays) {
     dates.push(compareDate.toDate());
     compareDate = compareDate.add(1, "day");
   }
